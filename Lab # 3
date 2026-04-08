@@ -1,0 +1,192 @@
+import sys
+import argparse
+import operator
+
+def cli_calculator():
+    parser = argparse.ArgumentParser(
+        description='CLI Calculator',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog='''
+Examples:
+  %(prog)s add 5 3
+  %(prog)s divide 10 3 -p 4
+  %(prog)s power 2 8
+  %(prog)s mod 17 5
+  %(prog)s "5 + 3 * 2"  # Expression mode
+        '''
+    )
+    
+    # Support both modes: operation mode and expression mode
+    parser.add_argument(
+        'expression',
+        nargs='+',
+        help='Operation and numbers, or quoted expression'
+    )
+    parser.add_argument('-p', '--precision', type=int, default=2)
+    parser.add_argument('-v', '--verbose', action='store_true')
+    parser.add_argument('-q', '--quiet', action='store_true', help='Suppress all output except result')
+    
+    args = parser.parse_args()
+    
+    # If single argument, treat as expression
+    if len(args.expression) == 1:
+        try:
+            # Simple eval (in production, use a proper expression parser)
+            result = eval(args.expression[0])
+            print(f"{result:.{args.precision}f}")
+            sys.exit(0)
+        except Exception as e:
+            print(f"Error: Invalid expression - {e}", file=sys.stderr)
+            sys.exit(1)
+    
+    # Otherwise, traditional operation mode
+    if len(args.expression) != 3:
+        print("Error: Expected format: operation num1 num2", file=sys.stderr)
+        sys.exit(1)
+    
+    op_name, num1_str, num2_str = args.expression
+    
+    operations = {
+        'add': operator.add,
+        'sub': operator.sub,
+        'subtract': operator.sub,
+        'mul': operator.mul,
+        'multiply': operator.mul,
+        'div': operator.truediv,
+        'divide': operator.truediv,
+        'pow': operator.pow,
+        'power': operator.pow,
+        'exp': operator.pow,
+        'mod': operator.mod,
+        'modulus': operator.mod,
+        '+': operator.add,
+        '-': operator.sub,
+        '*': operator.mul,
+        '/': operator.truediv,
+        '**': operator.pow,
+        '%': operator.mod,
+    }
+    
+    if op_name not in operations:
+        print(f"Error: Unknown operation '{op_name}'", file=sys.stderr)
+        print(f"Valid operations: {', '.join(sorted(set(operations.keys())))}", file=sys.stderr)
+        sys.exit(1)
+    
+    try:
+        num1 = float(num1_str)
+        num2 = float(num2_str)
+    except ValueError:
+        print("Error: Invalid numbers", file=sys.stderr)
+        sys.exit(1)
+    
+    if op_name in ['div', 'divide', '/'] and num2 == 0:
+        print("Error: Division by zero", file=sys.stderr)
+        sys.exit(1)
+    
+    if op_name in ['mod', 'modulus', '%'] and num2 == 0:
+        print("Error: Modulus by zero", file=sys.stderr)
+        sys.exit(1)
+    
+    result = operations[op_name](num1, num2)
+    
+    if not args.quiet:
+        if args.verbose:
+            symbol_map = {
+                'add': '+', 'subtract': '-', 'sub': '-',
+                'multiply': '*', 'mul': '*',
+                'divide': '/', 'div': '/',
+                'power': '**', 'pow': '**', 'exp': '**',
+                'modulus': '%', 'mod': '%'
+            }
+            symbol = op_name if op_name in '+-*/**%' else symbol_map.get(op_name, op_name)
+            print(f"{num1} {symbol} {num2} = {result:.{args.precision}f}")
+        else:
+            print(f"{result:.{args.precision}f}")
+    else:
+        print(result)
+    
+    sys.exit(0)
+
+if __name__ == "__main__":
+    cli_calculator()
+def menu_driven_todo():
+    # Store tasks as dictionaries with 'name' and 'completed' status
+    tasks = []
+    
+    while True:
+        print("\n--- To-Do List Menu ---")
+        print("1. Add Task")
+        print("2. View Tasks")
+        print("3. Mark Task as Completed")
+        print("4. Delete Task")
+        print("5. Quit")
+        
+        choice = input("Enter your choice: ").strip()
+        
+        if choice == "1":
+            task_name = input("Enter the task: ").strip()
+            if task_name:
+                tasks.append({"name": task_name, "completed": False})
+                print(f"Task '{task_name}' added.")
+            else:
+                print("Task cannot be empty.")
+                
+        elif choice == "2":
+            if tasks:
+                print("\nTasks:")
+                for i, task in enumerate(tasks, 1):
+                    status = "✓" if task["completed"] else "✗"
+                    print(f"{i}. [{status}] {task['name']}")
+            else:
+                print("No tasks found.")
+                
+        elif choice == "3":
+            if tasks:
+                print("\nTasks:")
+                for i, task in enumerate(tasks, 1):
+                    status = "✓" if task["completed"] else "✗"
+                    print(f"{i}. [{status}] {task['name']}")
+                
+                try:
+                    task_num = int(input("\nEnter the task number to mark as completed: "))
+                    if 1 <= task_num <= len(tasks):
+                        if tasks[task_num - 1]["completed"]:
+                            print(f"Task '{tasks[task_num - 1]['name']}' is already completed.")
+                        else:
+                            tasks[task_num - 1]["completed"] = True
+                            print(f"Task '{tasks[task_num - 1]['name']}' marked as completed.")
+                    else:
+                        print("Invalid task number.")
+                except ValueError:
+                    print("Please enter a valid number.")
+            else:
+                print("No tasks to mark as completed.")
+                
+        elif choice == "4":
+            if tasks:
+                print("\nTasks:")
+                for i, task in enumerate(tasks, 1):
+                    status = "✓" if task["completed"] else "✗"
+                    print(f"{i}. [{status}] {task['name']}")
+                
+                try:
+                    task_num = int(input("\nEnter the task number to delete: "))
+                    if 1 <= task_num <= len(tasks):
+                        removed_task = tasks.pop(task_num - 1)
+                        print(f"Task '{removed_task['name']}' deleted.")
+                    else:
+                        print("Invalid task number.")
+                except ValueError:
+                    print("Please enter a valid number.")
+            else:
+                print("No tasks to delete.")
+                
+        elif choice == "5":
+            print("Exiting the to-do list. Goodbye!")
+            break
+            
+        else:
+            print("Invalid choice. Try again.")
+
+if __name__ == "__main__":
+    menu_driven_todo()
