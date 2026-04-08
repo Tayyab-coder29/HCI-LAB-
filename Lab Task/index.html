@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outdoor Gear Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <div class="header-container">
+    <h1 class="logo">Outdoor Gear Store</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </div>
+</header>
+
+
+  <section class="hero">
+    <h2>Adventure Starts Here</h2>
+    <p>Shop tents, backpacks, and more.</p>
+    <a href="products.html" class="btn">Shop Now</a>
+
+    <!-- Slider -->
+    <div class="slider">
+      <div class="slides">
+        <img src="images/tent.avif" alt="Camping Tent">
+        <img src="images/bag.avif" alt="Hiking Backpack">
+        <img src="images/adventure.avif" alt="Outdoor Adventure">
+        <img src="images/mountain.avif" alt="Mountain Landscape">
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">❮</button>
+      <button class="next" onclick="moveSlide(1)">❯</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Outdoor Gear Store</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart - Outdoor Gear Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <h1 class="logo">Outdoor Gear Store</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </div>
+</header>
+
+<section id="cart-items"></section>
+<a href="checkout.html" class="btn">Proceed to Checkout</a>
+<script src="app.js"></script>
+<script type="module">
+  import { db } from "./firebase.js";
+  // Example: save an order
+  // import { collection, addDoc } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+</script>
+
+</body>
+</html>

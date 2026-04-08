@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout - Outdoor Gear Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+  <div class="header-container">
+    <h1 class="logo">Outdoor Gear Store</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </div>
+</header>
+<div class="overlay">
+  <div class="form-card">
+    <h2>Checkout</h2>
+    <form id="checkout-form">
+      <label>Name:</label>
+      <input type="text" required>
+
+      <label>Address:</label>
+      <textarea required></textarea>
+
+      <label>Payment:</label>
+      <select>
+        <option>Credit Card</option>
+        <option>Cash on Delivery</option>
+      </select>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+</div>
+
+<script src="firebase.js"></script>
+<script type="module">
+  import { db } from "./firebase.js";
+  // Example: save an order
+  // import { collection, addDoc } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+</script>
+
+</body>
+</html>
+

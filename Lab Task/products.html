@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products - Outdoor Gear Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <h1 class="logo">Outdoor Gear Store</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="products">
+  <div class="product">
+    <img src="images/tent.avif" alt="Tent">
+    <h3>Camping Tent</h3>
+    <p>PKR 9,500</p>
+    <button onclick="addToCart('Camping Tent',9500)">Add to Cart</button>
+  </div>
+  <div class="product">
+    <img src="images/bag.avif" alt="Backpack">
+    <h3>Hiking Backpack</h3>
+    <p>PKR 6,000</p>
+    <button onclick="addToCart('Hiking Backpack',6000)">Add to Cart</button>
+  </div>
+  <div class="product">
+      <img src="images/sleepingbag.avif" alt="Sleeping Bag">
+      <h3>Sleeping Bag</h3>
+      <p>PKR 6,000</p>
+      <button onclick="addToCart('Sleeping Bag',6000)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="images/boots.avif" alt="Boots">
+      <h3>Hiking Boots</h3>
+      <p>PKR 9,500</p>
+      <button onclick="addToCart('Hiking Boots',9500)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="images/jacket.avif" alt="Jacket">
+      <h3>Outdoor Jacket</h3>
+      <p>PKR 11,000</p>
+      <button onclick="addToCart('Outdoor Jacket',11000)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="images/stove.avif" alt="Camping Stove">
+      <h3>Camping Stove</h3>
+      <p>PKR 4,500</p>
+      <button onclick="addToCart('Camping Stove',4500)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="images/lantern.avif" alt="Lantern">
+      <h3>Lantern</h3>
+      <p>PKR 2,500</p>
+      <button onclick="addToCart('Lantern',2500)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="images/rope.avif" alt="Climbing Rope">
+      <h3>Climbing Rope</h3>
+      <p>PKR 7,000</p>
+      <button onclick="addToCart('Climbing Rope',7000)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="images/trekkingpoles.avif" alt="Trekking Poles">
+      <h3>Trekking Poles</h3>
+      <p>PKR 4,000</p>
+      <button onclick="addToCart('Trekking Poles',4000)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="images/waterbottle.avif" alt="Water Bottle">
+      <h3>Insulated Water Bottle</h3>
+      <p>PKR 2,000</p>
+      <button onclick="addToCart('Insulated Water Bottle',2000)">Add to Cart</button>
+    </div>
+</section>
+
+<script src="app.js"></script>
+<script type="module">
+  import { db } from "./firebase.js";
+  // Example: save an order
+  // import { collection, addDoc } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+</script>
+
+</body>
+</html>

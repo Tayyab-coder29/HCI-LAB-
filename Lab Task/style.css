@@ -1,0 +1,206 @@
+body { font-family: Arial, sans-serif; margin:0; background:#f4f4f4; }
+header {
+  background: #232f3e;
+  color: white;
+  padding: 1rem;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between; /* logo left, nav right */
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem; /* same size as nav links */
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-size: 1.5rem; /* match logo size */
+}
+
+.hero { background:#37475a; color:white; text-align:center; padding:3rem; }
+.btn { background:#ff9900; color:black; padding:0.7rem 1.2rem; text-decoration:none; border-radius:5px; }
+.products { display:flex; flex-wrap:wrap; justify-content:center; }
+.product { background:white; margin:1rem; padding:1rem; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.2); transform: perspective(600px) rotateY(0deg); transition: transform 0.3s; }
+.product:hover { transform: perspective(600px) rotateY(10deg); }
+/* Animation for sliding */
+@keyframes slide {
+  0%   { transform: translateX(0%); }
+  20%  { transform: translateX(0%); }
+  25%  { transform: translateX(-100%); }
+  45%  { transform: translateX(-100%); }
+  50%  { transform: translateX(-200%); }
+  70%  { transform: translateX(-200%); }
+  75%  { transform: translateX(-300%); }
+  95%  { transform: translateX(-300%); }
+  100% { transform: translateX(0%); }
+}
+
+body { font-family: Arial, sans-serif; margin:0; background:#f4f4f4; }
+header { background:#232f3e; color:white; padding:1rem; }
+nav a { color:white; margin:0 1rem; text-decoration:none; }
+.hero { text-align:center; padding:2rem; }
+
+.btn {
+  background:#ff9900; color:black;
+  padding:0.7rem 1.2rem; text-decoration:none;
+  border-radius:5px;
+}
+
+.slider {
+  position: relative;
+  max-width: 1000px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  display: flex;
+  object-fit: cover;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Full-page overlay background */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6); /* dark transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Floating card */
+.form-card {
+  background: rgba(255,255,255,0.95); /* slightly transparent white */
+  padding: 2rem;
+  border-radius: 16px;
+  width: 400px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px); /* glass effect */
+  text-align: center;
+}
+
+/* Title */
+.form-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Inputs */
+.form-card input, .form-card textarea, .form-card select {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.6rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Button */
+.form-card button {
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+.form-card button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #341f97, #6c5ce7);
+}
+.slider {
+  position: relative;
+  max-width: 800px;   /* smaller max width */
+  height: 400px;      /* fixed height for consistency */
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.slides {
+  display: flex;
+  width: 400%; /* 4 images */
+  transition: transform 1s ease; /* smoother transition */
+}
+
+.slides img {
+  width: 800px;   /* match slider width */
+  height: 400px;  /* match slider height */
+  object-fit: cover; /* crop nicely */
+}
+
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.product {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product h3 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.product p {
+  font-weight: bold;
+  color: #232f3e;
+}
+.product button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #ff9900;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
