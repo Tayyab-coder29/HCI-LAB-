@@ -1,0 +1,7 @@
+                                                                 Lab Report 
+Muhammad Tayyab                          67606
+
+ Takeaways of Lab:
+HCI (Human–Computer Interaction) focuses on how people interact with systems and aims to make them usable, efficient, and satisfying, while CG (Computer Graphics) focuses on creating and rendering visual content like images, animations, and 3D models; HCI cares about human behavior and usability principles, whereas CG deals more with algorithms, rendering, lighting, and modeling, but they complement each other because good graphics without usability is useless and good usability without clear visuals feels dull and confusing. Usability is critical in HCI because if a system is hard to use, people simply stop using it; for example, the clean and intuitive interface of Google search is a good example of usability, while cluttered menus and hidden options in some versions of Microsoft Word can frustrate users. Creating realistic computer graphics is challenging due to complex lighting models, shadows, textures, physics simulation, and high computational cost, and if graphics lag or look unnatural, users experience slow performance, visual discomfort, or reduced immersion. In the lab, basic interface design and simple graphics tools may feel easy at first, but aligning elements properly, maintaining consistency, and optimizing performance usually become difficult because small design mistakes quickly affect the overall user experience.
+Interactive design:
+ 
