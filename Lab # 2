@@ -1,0 +1,136 @@
+Activity 1:
+Evaluation of Website Design: PNWX vs LinkedIn
+1. Introduction
+The purpose of this document is to analyze and compare two websites—PNWX (Pacific Northwest X-Ray Inc.) and LinkedIn Feed—based on Human–Computer Interaction (HCI) principles. Good design follows usability, consistency, feedback, and simplicity, while bad design violates these principles, leading to confusion and inefficiency.
+
+2. Good Design Example: LinkedIn Feed
+Observations
+Usability:
+Clear navigation bar with icons and labels.
+Easy access to core features (posts, messages, notifications).
+
+Consistency:
+Uniform design across web and mobile platforms.
+Consistent use of fonts, colors, and layouts.
+
+Feedback:
+Real-time notifications and updates.
+Visual cues (likes, comments, shares) provide immediate response.
+
+Simplicity:
+Clean interface with minimal clutter.
+Prioritizes user content and interactions.
+
+Impact on User Experience
+LinkedIn’s design is intuitive and user-friendly, allowing professionals to focus on networking and content without distractions. It meets user needs effectively by balancing simplicity with functionality.
+ 
+
+3. Bad Design Example: PNWX Website
+Observations
+Usability Issues:
+Overloaded homepage with dense text and links.
+Difficult navigation; users must scroll or search extensively.
+Lack of Consistency:
+Inconsistent layout across pages.
+Visual elements (fonts, colors, spacing) vary, reducing coherence.
+Poor Feedback:
+Limited interactive cues; users may not know if actions (e.g., clicking links) succeeded.
+Complexity:
+Cluttered interface with too much information presented at once.
+No clear hierarchy or prioritization of content.
+
+Impact on User Experience
+PNWX’s design leads to confusion and frustration, making it hard for users to quickly find products or information. The lack of clarity and feedback reduces efficiency and discourages engagement
+ 
+
+4. Comparative Analysis
+Principle	LinkedIn (Good Design)	PNWX (Bad Design)
+Usability	Simple, intuitive navigation	Overloaded, hard to navigate
+Consistency	Uniform design across devices	Inconsistent layouts and styles
+Feedback	Real-time notifications, clear cues	Minimal feedback, unclear responses
+Simplicity	Clean, minimal clutter	Cluttered, text-heavy interface
+
+5. Conclusion
+LinkedIn Feed exemplifies good design by adhering to HCI principles: usability, consistency, feedback, and simplicity.
+PNWX Website demonstrates poor design, violating these principles and resulting in inefficiency and user frustration.
+
+
+Activity 2: Analyzing Website Usability:
+1. Introduction
+This report evaluates two websites—Drazeforce (https://drazeforce-next11.vercel.app/) and Yale School of Art (https://www.art.yale.edu/)—based on Human–Computer Interaction (HCI) principles. The analysis highlights usability, consistency, feedback, and simplicity to determine which design is effective and which is problematic.
+
+2. Good Design Example: Drazeforce Website
+Observations
+Usability:
+Clear navigation bar with well-labeled sections.
+Smooth scrolling and responsive layout across devices.
+
+Consistency:
+Uniform typography and color scheme throughout.
+Consistent placement of menus and buttons.
+
+Feedback:
+Interactive elements (hover effects, clickable buttons) provide immediate cues.
+Forms and actions give clear confirmation messages.
+
+Simplicity:
+Clean, modern interface with minimal clutter.
+Prioritizes readability and accessibility.
+
+
+
+Impact on User Experience
+The Drazeforce website is intuitive and user-friendly, allowing visitors to quickly understand its purpose and navigate without confusion. It demonstrates strong adherence to HCI principles.
+
+ 
+	
+3. Bad Design Example: Yale School of Art Website
+Observations
+Usability Issues:
+Homepage overloaded with text and images.
+Difficult to locate key information due to lack of hierarchy.
+
+Lack of Consistency:
+Inconsistent use of fonts, colors, and layouts.
+Pages feel disorganized and vary in structure.
+Poor Feedback:
+Limited interactive cues; links and buttons are not always clear.
+Users may struggle to know if actions were successful.
+
+Complexity:
+Cluttered interface with excessive information presented at once.
+No clear prioritization of content, leading to frustration.
+
+Impact on User Experience
+The Yale School of Art website creates confusion and inefficiency, making it hard for users to find relevant information. The lack of clarity and consistency violates HCI principles, resulting in poor usability.
+
+ 
+
+
+
+Activity 3: Redesign Exercise:
+1. Introduction
+This activity focuses on redesigning a poorly designed interface using HCI principles. The chosen interface is the Yale School of Art website, which suffers from clutter, inconsistency, and poor usability.
+
+2. Screenshot of Bad Design
+ 
+
+3. Violated HCI Principles
+Usability: Difficult to navigate, overloaded with text.
+Consistency: Fonts and layouts vary across pages.
+Feedback: Limited interactive cues.
+Simplicity: Cluttered interface with no clear hierarchy.
+
+4. Proposed Redesign
+ 
+5. Improvements
+Usability: Clear navigation bar and structured content.
+Consistency: Uniform fonts, colors, and layouts.
+Feedback: Hover effects and clear buttons.
+Simplicity: Clean layout with whitespace and prioritized content.
+
+6. Conclusion
+The redesign improves the Yale School of Art website by adhering to HCI principles, making it more intuitive, consistent, and user-friendly.
+
+
+
